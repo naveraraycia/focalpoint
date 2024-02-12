@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Heading from "./components/Heading";
 import Button from "./components/Button";
+import TestimonialCard from "./components/TestimonialCard";
 import hero from './assets/imgs/hero.jpg'
 import hero2 from './assets/imgs/g12.jpg'
 import about from './assets/imgs/about.jpg'
@@ -16,13 +17,17 @@ import g9 from './assets/imgs/g9.jpg'
 import g10 from './assets/imgs/g10.jpg'
 import g11 from './assets/imgs/g11.jpg'
 import g12 from './assets/imgs/g12.jpg'
+import t1 from './assets/imgs/t1.jpg'
+import t2 from './assets/imgs/t2.jpg'
+import t3 from './assets/imgs/t3.jpg'
+import t4 from './assets/imgs/t4.jpg'
 function App() {
   return (
     <>
       <div id='home'>
         <Navbar/>
 
-        <div className="container py-6 px-5 w-full mb-8 mx-auto font-sans flex flex-col-reverse xl:flex-row xl:justify-between md:py-16 xl:py-16">
+        <div className="container py-6 px-5 w-full pb-64 mx-auto font-sans flex flex-col-reverse xl:flex-row xl:justify-between">
         <div className="flex flex-col mt-16 xl:flex-col-reverse xl:mt-0">
             <div className="flex flex-col space-y-5 items-center xl:items-start">
               <Heading title={'Capture the'} subTitle={'Essence of you'} left={true} />
@@ -54,7 +59,7 @@ function App() {
       </div>
 
       <div id="about">
-        <div className="container py-6 px-5 w-full mb-8 mx-auto font-sans flex flex-col items-center justify-center space-y-24 md:py-16 xl:py-16 lg:flex-row-reverse lg:justify-between">
+        <div className="container py-6 px-5 w-full pb-64 mx-auto font-sans flex flex-col items-center justify-center space-y-24 lg:flex-row-reverse lg:justify-between">
           <div className="space-y-12 lg:w-3/6">
             <div className="space-y-5">
               <Heading title={'Few Things'} subTitle={'About us'} />
@@ -105,7 +110,7 @@ function App() {
       </div>
 
       <div id="gallery">
-        <div className="container py-6 px-5 w-full mb-8 mx-auto font-sans md:py-16 xl:py-16">
+        <div className="container py-6 px-5 w-full pb-64 mx-auto font-sans">
           <div className="space-y-5">
             <div className="space-y-5">
               <Heading title={'our'} subTitle={'Gallery'} />
@@ -113,7 +118,7 @@ function App() {
               <p className="text-center mx-auto leading-[158%] max-w-lg text-lg">highlighting the essence of your portrait photography as both an art form and a narrative medium</p>
             </div>
 
-            <div className="grid grid-cols-2 grid-rows-9 gap-5 lg:grid-cols-3 lg:grid-rows-5">
+            <div className="grid grid-cols-2 grid-rows-6 gap-5 md:grid-rows-4 lg:grid-cols-3 xl:grid-rows-5">
               <img src={g1} alt="gallery-1" className="object-cover object-center rounded-xl w-full h-full xl:row-span-2" />
               <img src={g2} alt="gallery-2" className="object-cover object-center rounded-xl w-full h-full" />
               <img src={g3} alt="gallery-1" className="object-cover object-center rounded-xl w-full h-full xl:row-span-2" />
@@ -127,6 +132,29 @@ function App() {
               <img src={g11} alt="gallery-1" className="object-cover object-center rounded-xl w-full h-full xl:row-span-1" />
               <img src={g8} alt="gallery-2" className="object-cover object-center rounded-xl w-full h-full" />
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="testimonials" className="bg-[#161616]">
+        <div className="container py-32 px-5 w-full pb-32 mx-auto font-sans">
+          <div className="space-y-5">
+            <Heading title={'Client'} subTitle={'Testimonials'} light={true} />
+
+            <div className="flex flex-col justify-center items-center space-y-5 lg:mr-44">
+              <TestimonialCard img={t1} name={'Victoria'} number={1} description={'The attention to detail, from planning our session to the final presentation of our photos, was impeccable. Each portrait is a masterpiece, filled with emotion and beauty. These are not just photos; they are precious memories that we will cherish always.'} />
+
+              <div className="lg:ml-96 w-full xl:w-fit">
+                <TestimonialCard img={t2} name={'Elizabeth'} number={2} description={'Their passion for photography and their ability to connect with their subjects is evident in every shot. The portraits from our session are incredible—so genuine and full of life.'} />
+              </div>
+
+              <TestimonialCard img={t3} name={'Jane'} number={3} description={'Our session felt more like a day with a friend than a photo shoot, and the results were stunning. The photos are vibrant, alive, and they perfectly capture our personalities.'} />
+
+              <div className="lg:ml-96 w-full xl:w-fit">
+                <TestimonialCard img={t4} name={'Madison'} number={4} description={'Each photograph tells a story, our story, with such authenticity and emotion. We\'re grateful to have our moments immortalized so beautifully.'} />
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

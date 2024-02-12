@@ -20,6 +20,7 @@ function Navbar() {
         <nav>
           <ul className="hidden space-x-10 text-sm text-ash-darkest uppercase font-bold lg:flex">
             <li onClick={() => handleClickScroll('home')} className="hover:text-black hover:cursor-pointer">Home</li>
+            <li onClick={() => handleClickScroll('about')} className="hover:text-black hover:cursor-pointer">About</li>
             <li onClick={() => handleClickScroll('gallery')} className="hover:text-black hover:cursor-pointer">Gallery</li>
             <li onClick={() => handleClickScroll('testimonials')} className="hover:text-black hover:cursor-pointer">Testimonials</li>
             <li onClick={() => handleClickScroll('services')} className="hover:text-black hover:cursor-pointer">Services</li>
