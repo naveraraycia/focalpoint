@@ -38,12 +38,12 @@ function Navbar() {
         </nav>
 
         <ul id="menu" onClick={toggleMenu} className={`text-white fixed font-bold z-[99] top-0 bottom-0 left-0 hidden flex-col w-full min-h-screen items-center font-sans space-y-5 uppercase text-2xl bg-black bg-opacity-70 lg:hidden` }>
-        <li onClick={() => handleClickScroll('home')} className={`text-cream-light mt-40 hover:cursor-pointer hover:text-black hover:font-black`}>Home</li>
-        <li onClick={() => handleClickScroll('about')} className={`text-cream-light hover:cursor-pointer hover:text-black hover:font-black`}>About</li>
-        <li onClick={() => handleClickScroll('skillSet')} className={`text-cream-light hover:cursor-pointer hover:text-black hover:font-black`}>Gallery</li>
-        <li onClick={() => handleClickScroll('education')} className={`text-cream-light hover:cursor-pointer hover:text-black hover:font-black`}>Testimonials</li>
-        <li onClick={() => handleClickScroll('portfolio')} className={`text-cream-light hover:cursor-pointer hover:text-black hover:font-black`}>Services</li>
-        <li onClick={() => handleClickScroll('contact')} className={`text-cream-light hover:cursor-pointer hover:text-black hover:font-black`}>Contact</li>
+        <li onClick={() => handleClickScroll('home')} className={`text-cream-light mt-40 hover:cursor-pointer hover:text-[#929191]`}>Home</li>
+        <li onClick={() => handleClickScroll('about')} className={`text-cream-light hover:cursor-pointer hover:text-[#929191]`}>About</li>
+        <li onClick={() => handleClickScroll('gallery')} className={`text-cream-light hover:cursor-pointer hover:text-[#929191]`}>Gallery</li>
+        <li onClick={() => handleClickScroll('testimonials')} className={`text-cream-light hover:cursor-pointer hover:text-[#929191]`}>Testimonials</li>
+        <li onClick={() => handleClickScroll('services')} className={`text-cream-light hover:cursor-pointer hover:text-[#929191]`}>Services</li>
+        <li onClick={() => handleClickScroll('contact')} className={`text-cream-light hover:cursor-pointer hover:text-[#929191]`}>Contact</li>
       </ul>
       </div>
     </div>
