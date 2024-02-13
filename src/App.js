@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Heading from "./components/Heading";
 import Button from "./components/Button";
@@ -5,6 +6,8 @@ import TestimonialCard from "./components/TestimonialCard";
 import hero from './assets/imgs/hero.jpg'
 import hero2 from './assets/imgs/g12.jpg'
 import about from './assets/imgs/about.jpg'
+import PriceCard from "./components/PriceCard";
+import Footer from "./components/Footer";
 import g1 from './assets/imgs/g1.jpg'
 import g2 from './assets/imgs/g2.jpg'
 import g3 from './assets/imgs/g3.jpg'
@@ -22,6 +25,13 @@ import t2 from './assets/imgs/t2.jpg'
 import t3 from './assets/imgs/t3.jpg'
 import t4 from './assets/imgs/t4.jpg'
 function App() {
+  const [subject, setSubject] = useState('')
+  const [message, setMessage] = useState('')
+
+  function handleClickScroll(idName){
+    const sectionToScroll = document.getElementById(`${idName}`)
+    sectionToScroll.scrollIntoView({behavior: 'smooth'})
+  }
   return (
     <>
       <div id='home'>
@@ -34,7 +44,7 @@ function App() {
 
               <p className="text-center leading-[158%] text-lg max-w-lg xl:text-left">Specializing in portrait photography, we dive deep into the art of storytelling through the lens, focusing on the subtleties that make each person uniquely themselves. We believe in creating photographs that do more than showcase.</p>
 
-              <div className="w-[300px]">
+              <div className="w-[300px]" onClick={() => handleClickScroll('gallery')}>
                 <Button>Explore</Button>
               </div>
             </div>
@@ -157,6 +167,53 @@ function App() {
 
           </div>
         </div>
+      </div>
+
+      <div id="services">
+        <div className="container py-32 px-5 w-full pb-64 mx-auto font-sans">
+          <div className="space-y-5">
+            <Heading title={'Our'} subTitle={'Services'} />
+
+            <div className="grid grid-cols-1 grid-rows-3 gap-10 lg:grid-cols-3 lg:grid-rows-1">
+              <PriceCard price={99} hours={3} outfitNum={2} imgNum={25} letter={'A'} />
+              <PriceCard price={149} hours={5} outfitNum={3} imgNum={35} letter={'B'} />
+              <PriceCard price={199} hours={5} outfitNum={5} imgNum={50} letter={'C'} />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="contact">
+        <div className="container py-6 px-5 w-full pb-32 mx-auto font-sans flex flex-col-reverse justify-center items-center space-y-24 lg:flex-row lg:space-x-24 lg:space-y-0">       
+          <div className="space-y-5 flex flex-col text-center lg:text-left xl:justify-center xl:items-center max-w-lg mt-24 lg:mt-0">
+              <span className="text-3xl font-extrabold uppercase">Frame your moments</span>
+
+              <p className="text-center leading-[158%] text-lg md:text-justify">Your stories, dreams, and visions inspire us, and we would love to hear from you. Whether you have a question, wish to book a session, or simply want to share a thought, our mail is always open.</p>
+
+              <p className="text-center leading-[158%] text-lg md:text-justify">We're here to answer your queries, plan your perfect photo session, and help bring your vision to life. Every message is a step towards a new story, a new adventure, and we're excited to embark on this journey with you.</p>
+          </div>
+
+          <div className="space-y-5 max-w-xl">
+            <Heading title={'Contact'} subTitle={'Get in touch'} right={true} />
+            <div className="bg-black p-5 rounded-2xl max-w-xl">
+              <form className="space-y-5 w-full">
+                <input type="text" id="subject" placeholder="Inquiry" value={subject} onChange={(e) => setSubject(e.target.value)} className="p-5 w-full text-sm rounded-xl placeholder:text-[#818181] focus:outline-none" />
+
+                <textarea id="message" cols="30" rows="10" value={message} onChange={(e) => setMessage(e.target.value)}  placeholder="Message..." className="p-5 w-full text-sm rounded-xl placeholder:text-[#818181] focus:outline-none"></textarea>
+
+                <div>
+                  <a href={`mailto:focalpoint@example.com?Subject=${subject}&body=${message}`} className="w-fit">
+                    <Button version={'secondary'}>Send</Button>
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="footer">
+        <Footer />
       </div>
     </>
   );

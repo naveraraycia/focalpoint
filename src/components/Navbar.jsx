@@ -24,7 +24,7 @@ function Navbar() {
             <li onClick={() => handleClickScroll('gallery')} className="hover:text-black hover:cursor-pointer">Gallery</li>
             <li onClick={() => handleClickScroll('testimonials')} className="hover:text-black hover:cursor-pointer">Testimonials</li>
             <li onClick={() => handleClickScroll('services')} className="hover:text-black hover:cursor-pointer">Services</li>
-            <li onClick={() => handleClickScroll('contacts')} className="hover:text-black hover:cursor-pointer">Contact</li>
+            <li onClick={() => handleClickScroll('contact')} className="hover:text-black hover:cursor-pointer">Contact</li>
           </ul>
 
           {/* Hamburger icon */}
